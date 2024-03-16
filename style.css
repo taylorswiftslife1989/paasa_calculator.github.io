@@ -1,0 +1,113 @@
+body.dark-theme {
+  background-color: #1f1f1f;
+  color: #ffffff;
+}
+
+body.light-theme {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Light theme specific styles */
+.light-theme input[type="number"] {
+  background-color: #ffffff;
+  border: 1px solid #666666;
+  color: #000000;
+}
+
+.light-theme label,
+.light-theme button {
+  color: #000000;
+}
+
+.light-theme h1 {
+  color: #000000; /* Changing the heading color to black */
+}
+
+.light-theme #result {
+  color: #000000; /* Changing the text color to black */
+  font-size: 18px; /* Setting font size to 18px */
+  margin-top: 8px; /* Adding margin to create a gap */
+  margin-bottom: 8px; /* Adding margin to create a gap */
+  font-weight: bold;
+}
+/* Changing color for multiply and delete buttons */
+.light-theme button {
+  padding: 10px 20px;
+  background-color: #4caf50; /* New color */
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.light-theme button:hover {
+  background-color: #388e3c; /* Darker shade for hover */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1f1f1f;
+  color: #ffffff; /* Text color */
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff; /* Title color */
+  font-size: 32px;
+}
+
+form {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  text-align: center;
+  color: #ffffff; /* Label color */
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  background-color: #333333; /* Input background color */
+  border: 1px solid #666666; /* Input border color */
+  color: #ffffff; /* Input text color */
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4caf50; /* Button background color */
+  color: #ffffff; /* Button text color */
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #388e3c;
+}
+
+/* The result is in dark mode */
+#result {
+  text-align: center;
+  color: #ffffff; /* Result text color */
+  font-size: 18px;
+  margin-top: 8px; /* Adding margin to create a gap */
+  margin-bottom: 8px; /* Adding margin to create a gap */
+  font-weight: bold;
+}
+footer {
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 18px;
+}

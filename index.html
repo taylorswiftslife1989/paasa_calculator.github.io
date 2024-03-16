@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiplication and Division Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Link to your external CSS file -->
+  </head>
+  <body class="dark-theme">
+    <!-- Default theme is dark mode -->
+    <h1>Multiplication and Division Calculator</h1>
+    <form id="calculatorForm">
+      <label for="firstNumber">Enter 1st number:</label>
+      <input type="number" id="firstNumber" required />
+      <label for="secondNumber">Enter 2nd number:</label>
+      <input type="number" id="secondNumber" required />
+      <button type="button" onclick="multiply()">Multiply</button>
+      <button type="button" onclick="divide()">Divide</button>
+    </form>
+    <div id="result"><strong id="resultLabel">The result is:</strong></div>
+    <button id="themeToggle" onclick="toggleTheme()">
+      Switch to Light Mode
+    </button>
+
+    <footer>Created by: Christian Harry E. Paasa</footer>
+
+    <script>
+      function multiply() {
+        var num1 = parseFloat(document.getElementById("firstNumber").value);
+        var num2 = parseFloat(document.getElementById("secondNumber").value);
+        var result = num1 * num2;
+        document.getElementById("result").innerText =
+          "The result is: " + result;
+      }
+
+      function divide() {
+        var num1 = parseFloat(document.getElementById("firstNumber").value);
+        var num2 = parseFloat(document.getElementById("secondNumber").value);
+        if (num2 === 0) {
+          alert("Math Error! The 2nd number must not be divided by zero!");
+        } else {
+          var result = num1 / num2;
+          document.getElementById("result").innerText =
+            "The result is: " + result;
+        }
+      }
+
+      function toggleTheme() {
+        var body = document.body;
+        var themeButton = document.getElementById("themeToggle");
+
+        if (body.classList.contains("dark-theme")) {
+          body.classList.remove("dark-theme");
+          body.classList.add("light-theme");
+          themeButton.innerText = "Switch to Dark Mode";
+        } else {
+          body.classList.remove("light-theme");
+          body.classList.add("dark-theme");
+          themeButton.innerText = "Switch to Light Mode";
+        }
+      }
+    </script>
+  </body>
+</html>
